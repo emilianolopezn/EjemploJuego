@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CambioImagenes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Closed="Window_Closed">
-    <Canvas Focusable="True" Name="canvasPrincipal" KeyDown="canvasPrincipal_KeyDown">
+    <Canvas Focusable="True" Name="canvasPrincipal" KeyDown="canvasPrincipal_KeyDown" Background="Black">
         <Image Name="spritePacman" Width="50" Height="50" Canvas.Left="132" Canvas.Top="177" Stretch="Fill" />
     </Canvas>
 </Window>

@@ -73,22 +73,26 @@ namespace CambioImagenes
 
         private void canvasPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Left)
+            if (!e.IsRepeat)
             {
-                pacman.CambiarDireccion(Pacman.Direccion.Izquierda);
+                if (e.Key == Key.Left)
+                {
+                    pacman.CambiarDireccion(Pacman.Direccion.Izquierda);
+                }
+                if (e.Key == Key.Right)
+                {
+                    pacman.CambiarDireccion(Pacman.Direccion.Derecha);
+                }
+                if (e.Key == Key.Up)
+                {
+                    pacman.CambiarDireccion(Pacman.Direccion.Arriba);
+                }
+                if (e.Key == Key.Down)
+                {
+                    pacman.CambiarDireccion(Pacman.Direccion.Abajo);
+                }
             }
-            if (e.Key == Key.Right)
-            {
-                pacman.CambiarDireccion(Pacman.Direccion.Derecha);
-            }
-            if (e.Key == Key.Up)
-            {
-                pacman.CambiarDireccion(Pacman.Direccion.Arriba);
-            }
-            if (e.Key == Key.Down)
-            {
-                pacman.CambiarDireccion(Pacman.Direccion.Abajo);
-            }
+            
         }
     }
 }
